@@ -20,22 +20,22 @@ abstract class Template implements TemplateInterface {
 
     const ACCESSIBLE_BY = 'administrator';
 
-    protected $postId; // Extended in the other classes. Doesn't work in interface.
+    protected $postId; 
 
-    public function __construct(array $data, int $postId) { // Extended in the other classes. Doesn't work in interface.
+    public function __construct(array $data, int $postId) {
         $this->data = $data;
         $this->postId = $postId;
     }
 
-    public function getTitle(): string { // Extended in the other classes. Doesn't work in interface.
+    public function getTitle(): string {
         return $this->data[$this->postId]['title'];
     }
 
-    public function getBody(): string { // Extended in the other classes. Doesn't work in interface.
+    public function getBody(): string {
         return $this->data[$this->postId]['body'];
     }
 
-    abstract protected function publish(): void; // You must define this method, similar like in interface.
+    abstract protected function publish(): void;
 
 }
 
