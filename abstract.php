@@ -10,7 +10,7 @@ abstract class Template {
 
      const ACCESSIBLE_BY = 'administrator';
 
-     public $postId; // Extended in the other classes. Doesn't work in interface.
+     protected $postId; // Extended in the other classes. Doesn't work in interface.
 
      public function __construct(array $data, int $postId) { // Extended in the other classes. Doesn't work in interface.
          $this->data = $data;
@@ -25,7 +25,7 @@ abstract class Template {
          return $this->data[$this->postId]['body'];
      }
 
-     abstract public function publish(): void; // You must define this method, similar like in interface.
+     abstract protected function publish(): void; // You must define this method, similar like in interface.
 
 }
 
