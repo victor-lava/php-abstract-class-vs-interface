@@ -19,7 +19,8 @@ interface Template {
 
 }
 
-
+/* You can use implement more interfaces ( multiple inheritance ), for example:
+class Page implemens Template, Layout */
 class Page implements Template {
 
     private $postId;
